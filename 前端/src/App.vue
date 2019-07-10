@@ -7,24 +7,7 @@
 				<div class="left fl">
 					<ul>
 						<li><router-link to="/">主页</router-link></li>
-						<li>|</li>
-						<li><a >MIUI</a></li>
-						<li>|</li>
-						<li><a >米聊</a></li>
-						<li>|</li>
-						<li><a >游戏</a></li>
-						<li>|</li>
-						<li><a >多看阅读</a></li>
-						<li>|</li>
-						<li><a >云服务</a></li>
-						<li>|</li>
-						<li><a  >金融</a></li>
-						<li>|</li>
-						<li><a  >商城移动版</a></li>
-						<li>|</li>
-						<li><a  >问题反馈</a></li>
-						<li>|</li>
-						<li><a  >Select Region</a></li>
+
 						<div class="clear"></div>
 					</ul>
 				</div>
@@ -35,9 +18,10 @@
 						<ul><li><a  @click="Login" >{{this.login}}</a></li>
 							
 							<li>|</li>
-							<li><a  @click="register" >注册</a></li>
-							<li>|</li>
-							
+							<li><a  @click="register" >{{this.reg}}</a></li>
+							<li :hidden="hidden"><a @click="Super">商品管理</a></li>
+							<li :hidden="hidden"><a @click="SuperOrder">订单管理</a></li>
+
 							<li><a  @click="personal" >个人中心 {{this.username}}</a></li>
 						</ul>
 					</div>
@@ -55,7 +39,6 @@
         </div>
         <!-- xiangqingjieshu -->
         <footer class="mt20 center">			
-			<div class="mt20">商城|MIUI|米聊|多看书城|路由器|视频电话|天猫店|淘宝直营店|网盟|移动|隐私政策|Select Region</div>
 			<div>©mi.com 京ICP证110507号 京ICP备10046444号 京公网安备11010802020134号 京网文[2014]0059-0009号</div> 
 			<div>违法和不良信息举报 本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</div>
 		</footer>
@@ -69,14 +52,19 @@ export default {
 	  return{
 			username:" ",
 			login:'登陆',
+			reg:'注册',
+			hidden:true,
 	  }
 	},
 	 created(){
-		console.log(Cookies.get('token'))
 		axios.post('/wish/api-token-verify/',{'token':Cookies.get('token')})
 		.then((result)=>{
 			this.login = "注销"
 			this.username = result.data.username
+			this.reg = ""
+			if(this.username == "admin"){
+				this.hidden = false
+			}
 		}).catch(()=>{
 			 this.$notify.error({
 				  title: '请登录',
@@ -115,7 +103,14 @@ export default {
 		  		})
 				}
 				
+		},
+		Super(){
+			this.$router.push({path:"/super"})
+		},
+		SuperOrder(){
+			this.$router.push({path:"/SuperOrder"})
 		}
+
   }
 }
 </script>
@@ -142,7 +137,6 @@ a{border:none;text-decoration: none;color:#000;cursor: pointer;}
 .pr{padding-right: 40px;}
 
 .h3{font-size: 22px;font-weight: bold;}
-
 
 /*header*/
 header{width: 100%;height: 40px;background: #333}
@@ -361,5 +355,10 @@ header .top .right .gouwuche:hover{color:#000;background: #666;}
 .grzxbj .selfinfo .rtcont .ddxq .ztxx ul li a{color:rgb(117,117,117);}
 .grzxbj .selfinfo .rtcont .ddxq .ztxx ul li a:hover{color:#ff6700;}
 /*footer*/
-footer{width: 100%;height: 120px;line-height: 30px;text-align: center;font-size: 12px;background: rgb(250,250,250);padding:30px 0;}
+footer{width: 100%;line-height: 30px;text-align: center;font-size: 12px;background: rgb(250,250,250);padding:30px 0;}
+
+.fl img{
+	width: 100%;
+	height: 100%;
+}
 </style>

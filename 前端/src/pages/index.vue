@@ -8,11 +8,11 @@
                     <div class="nav fl">
                         <ul>
                             <li ><a @click="contentlistlink('手机')">手机</a></li>
-                            <li><a  @click="contentlistlink('平板.笔记本')">平板.笔记本</a></li>
+                            <li><a  @click="contentlistlink('平板.笔记本')">笔记本</a></li>
                             <li><a   @click="contentlistlink('电视')">电视</a></li>
-                            <li><a   @click="contentlistlink('平板.笔记本')">路由器</a></li>
+                            <li><a   @click="contentlistlink('路由器')">路由器</a></li>
                             <li><a   @click="contentlistlink('耳机')">耳机</a></li>
-							<li><a   @click="contentlistlink('音箱')">音响</a></li>
+							<li><a   @click="contentlistlink('音箱')">音箱</a></li>
 							<li><a   @click="contentlistlink('')">所有商品</a></li>
 
 							
@@ -23,10 +23,10 @@
         <!-- end banner_x -->
         <!-- start banner_y -->
 		<div class="banner_y center">
-			<div class="nav">				
+			<div class="nav">
 				<ul>
 					<li>
-						<a  >手机</a>
+						<a  @click="contentlistlink('手机')">手机</a>
 						<div class="pop">
 							<div class="left fl" >
 								<div v-for="item in goodslist">
@@ -58,8 +58,7 @@
 						</div>
 					</li>
 					<li>
-						<a  >笔记本</a>
-						<a  >平板</a>
+						<a  @click="contentlistlink('平板.笔记本')">笔记本</a>
 						<div class="pop">
 							<div class="left fl">
 								<div v-for="item in goodslist3">
@@ -91,7 +90,7 @@
 						</div>
 					</li>
 					<li>
-						<a  >电视</a>
+						<a @click="contentlistlink('电视')">电视</a>
 						<div class="pop">
 							<div class="left fl">
 								<div v-for="item in goodslist5">
@@ -111,7 +110,7 @@
 						</div>
 					</li>
 					<li>
-						<a  >路由器</a>
+						<a @click="contentlistlink('路由器')">路由器</a>
 						<div class="pop">
 							<div class="left fl">
 								<div v-for="item in goodslist6">
@@ -144,7 +143,7 @@
 					</li>
 					
 					<li>
-						<a  >耳机</a>
+						<a @click="contentlistlink('耳机')">耳机</a>
 					
 						<div class="pop">
 							<div class="left fl">
@@ -178,7 +177,7 @@
 					</li>
 					
 					<li>
-						<a  >音响</a>
+						<a @click="contentlistlink('音箱')">音箱</a>
 						<div class="pop">
 							<div class="left fl">
 								<div v-for="item in goodslist10">
@@ -327,12 +326,12 @@ export default {
 				console.log(result.data.results)
 				this.goodslist9= result.data.results
 			})
-			axios.get('/goods/Good_list/?search=音响')
+			axios.get('/goods/Good_list/?search=音箱')
 			.then((result)=>{
 				console.log(result.data.results)
 				this.goodslist10 = result.data.results
 			})
-			axios.get('/goods/Good_list/?page=2&search=音响')
+			axios.get('/goods/Good_list/?page=2&search=音箱')
 			.then((result)=>{
 				console.log(result.data.results)
 				this.goodslist11= result.data.results

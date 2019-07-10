@@ -12,7 +12,8 @@ body{background: rgb(20,33,42)  }
 .fr{float: right;}
 .clear{clear:both;}
 .center{margin:0 auto;}
-.border{border:1px solid red;}
+.border{border:1px solid red; }
+
 
 table{width: 360px;height: 240px;border:none;margin: 0 auto;}
 tr,th,td{height: 20px;}

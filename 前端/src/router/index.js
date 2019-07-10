@@ -6,6 +6,8 @@ import contentList from '@/pages/contentList'
 import order from '@/pages/order'
 import personal from '@/pages/personal'
 import shopping from '@/pages/shopping'
+import Super from '@/pages/super'
+import SuperOrder from '@/pages/SuperOrder'
 
 Vue.use(Router)
 
@@ -34,6 +36,14 @@ export default new Router({
     {
       path: '/shopping',
       component: shopping
+    },
+    {
+      path: '/super',
+      component: Super
+    },
+    {
+      path:'/superOrder',
+      component:SuperOrder
     }
   ]
 })

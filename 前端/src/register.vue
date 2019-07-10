@@ -11,7 +11,7 @@
 					<div class="username">用&nbsp;&nbsp;户&nbsp;&nbsp;名:&nbsp;&nbsp;<input class="shurukuang" type="text" name="username" placeholder="请输入你的用户名" v-model="last_name"/><p>请不要输入汉字</p></div>
 					<div class="username">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:&nbsp;&nbsp;<input class="shurukuang" type="password" name="password" placeholder="请输入你的密码" v-model="password"/><p>请输入6位以上字符</p></div>
 					
-					<div class="username">确认密码:&nbsp;&nbsp;<input class="shurukuang" type="password" name="repassword" placeholder="请确认你的密码" :model="re_password"/><p>两次密码要输入一致哦</p></div>
+					<div class="username">确认密码:&nbsp;&nbsp;<input class="shurukuang" type="password" name="repassword" placeholder="请确认你的密码" v-model="re_password"/><p>两次密码要输入一致哦</p></div>
 					<div class="username">手&nbsp;&nbsp;机&nbsp;&nbsp;号:&nbsp;&nbsp;<input class="shurukuang" type="text" name="tel" placeholder="请填写正确的手机号" v-model="phone_num"/><el-button plain class="CAPTCHA" @click="captcha">获取验证码</el-button></div>
 					<div class="username">
 						<div class="left fl">验&nbsp;&nbsp;证&nbsp;&nbsp;码:&nbsp;&nbsp;<input class="yanzhengma" type="text" name="username" placeholder="请输入验证码" v-model="re_captcha"/></div>
@@ -82,6 +82,8 @@ export default {
 					});
 				}
 				else{
+					console.log(this.password)
+					console.log(this.re_password)
 						this.$notify.error({
 						title:'密码错误',
 						message: '两次密码输入不统一',

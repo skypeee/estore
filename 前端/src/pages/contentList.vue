@@ -13,8 +13,8 @@
 					<div class="jiage">{{item.good_price}}元</div>
 				</div>
 				<div class="clear"></div>
-				<div class="page">
-        <el-pagination background prev-text="上一页"  @current-change="handleCurrentChange2" next-text="下一页" layout="prev, pager, next" :total="total" :page-size=30 style="margin-top: 5px;float: right;margin-right: 15px;"></el-pagination>
+				<div class="page" style="height:50px">
+        <el-pagination background prev-text="上一页"  @current-change="handleCurrentChange2" next-text="下一页" layout="prev, pager, next" :total="total" :page-size=30 style="margin-top: 25px;float: right;margin-right: 15px;"></el-pagination>
       </div>
 			</div>
 				
