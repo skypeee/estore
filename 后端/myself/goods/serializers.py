@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import goods, favorite, order
+from .models import goods, favorite, order, Comment
 from users.serializers import UserSerializer
 
 class goodSerializer(serializers.ModelSerializer):
@@ -76,4 +76,23 @@ class orderCreateSerializer(serializers.ModelSerializer):
         instance.good_num = validated_data.get('good_num', instance.good_num)
         instance.save()
         return instance
+
+
+class CommentSerializer(serializers.ModelSerializer):
+    user = UserSerializer()
+    good = goodSerializer()
+    comment_time = serializers.DateTimeField(format='%Y-%m-%d %H:%M')
+
+    class Meta:
+        model = Comment
+        fields = ('__all__')
+
+
+class CommentCreateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Comment
+        fields = ('__all__')
+
+    def create(self, validated_data):
+        return Comment.objects.create(**validated_data)
 

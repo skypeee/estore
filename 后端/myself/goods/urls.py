@@ -11,4 +11,9 @@ urlpatterns = [
     url(r'Favorite_Delete/', views.FavoriteDeleteView.as_view(), name='Favorite_Delete'),
     url(r'Border_Created/', views.OrderCreateView.as_view(), name='Order_Create'),
     url(r'Order_List/', views.OrderListView.as_view(), name="Order_List"),
+    url(r'Order_Delete/', views.orderDeleteView.as_view(), name="Order_Delete"),
+    url(r"Comment_List/", views.CommentListView.as_view(), name="Comment_List"),
+    url(r"Comment_Created/", views.CommentCreateView.as_view(), name="Comment_List"),
+    url(r"Order_Update/", views.orderUpdateView.as_view(), name="order_update"),
+    url(r"ali_Pay/", views.alipayView.as_view(), name="aliPay"),
 ]

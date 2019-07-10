@@ -8,4 +8,7 @@ def jwt_response_payload_handler(token, user=None, request=None):
         'user_id': user.id,  # 自定义字段1
         'username': user.username,  # 自定义字段2
         'last_name': user.last_name,
+        'signature': user.user_signature,
+        # 'user_img': user.user_img,
+        'user_address': user.user_address
     }

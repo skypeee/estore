@@ -25,8 +25,8 @@ urlpatterns = [
     url(r'^$', schema_view),
     url(r'^admin/', admin.site.urls),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url(r'^wish/', include('wish.urls', namespace='wish', app_name='wish')),
     url(r'^users/', include('users.urls', namespace='users', app_name='user')),
+    url(r'^wish/', include('wish.urls', namespace='wish', app_name='wish')),
     url(r'^goods/', include('goods.urls', namespace='goods', app_name='goods')),
     url(r'^media/(?P<path>.*)$', serve, {"document_root": settings.MEDIA_ROOT}),
 ]

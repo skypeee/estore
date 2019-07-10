@@ -11,3 +11,19 @@ GroupDeleteSchema = AutoSchema([
                 description="角色ID",
             ),
 ])
+OrderSchema = AutoSchema([
+    coreapi.Field(
+        "page",
+        required=False,
+        location="query",
+        schema=coreschema.Integer(),
+        description="A page number within the paginated result set."
+    ),
+    coreapi.Field(
+        "page_size",
+        required=False,
+        location="query",
+        schema=coreschema.Integer(),
+        description="Number of results to return per page."
+    ),
+])

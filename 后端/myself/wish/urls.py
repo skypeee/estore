@@ -8,7 +8,5 @@ schema_view = get_schema_view(title='Users API', renderer_classes=[OpenAPIRender
 
 urlpatterns = [
     url(r'^api-token-verify/', verify_jwt_token),
-    url(r'file_download/', views.file_download.as_view(), name='user_download'),
-
-
+    url(r'^alipay/', views.alipayView.as_view(), name="alipay"),
 ]

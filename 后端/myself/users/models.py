@@ -4,9 +4,8 @@ from django.contrib.auth.models import AbstractUser
 
 class UserProfile(AbstractUser):
     user_phone = models.CharField(max_length=255, default='', verbose_name='用户手机号')
-    user_img = models.ImageField(default='', upload_to='user/%Y/%M', verbose_name='用户头像')
     user_address = models.CharField(default='', max_length=255, verbose_name='用户地址')
-
+    user_signature = models.CharField(default="", max_length=255, verbose_name="用户签名")
 
     class Meta:
         verbose_name = "用户"
