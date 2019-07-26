@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import goods, favorite, order, Comment
+from .models import goods, favorite, order, Comment, replay
 from users.serializers import UserSerializer
 
 class goodSerializer(serializers.ModelSerializer):
@@ -96,3 +96,20 @@ class CommentCreateSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         return Comment.objects.create(**validated_data)
 
+
+class ReplaySerializer(serializers.ModelSerializer):
+    user = UserSerializer()
+    comment = CommentSerializer()
+
+    class Meta:
+        model = replay
+        fields = ('__all__')
+
+
+class ReplayCreateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = replay
+        fields = ('__all__')
+
+    def create(self, validated_data):
+        return replay.objects.create(**validated_data)

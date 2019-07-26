@@ -1,6 +1,7 @@
 from django.db import models
 from datetime import datetime
 from django.contrib.auth import get_user_model
+from users.models import userAddress
 import sys
 # Create your models here.
 
@@ -40,8 +41,8 @@ class order(models.Model):
     )
     good = models.ForeignKey(goods, verbose_name='商品')
     user = models.ForeignKey(User, verbose_name='用户')
-    order_address = models.CharField(max_length=255, verbose_name='收货地址')
     good_num = models.IntegerField(default=1, verbose_name='商品数量')
+    order_address = models.CharField(default="", verbose_name="收货地址", max_length=255)
     order_num = models.CharField(default=1 , max_length=10000, verbose_name="订单号")
     order_aceptman = models.CharField(default="", max_length=255, verbose_name="收货人名称")
     order_phone = models.CharField(default="", max_length=255, verbose_name="收货手机号")
@@ -58,4 +59,16 @@ class Comment(models.Model):
     comment_time = models.DateTimeField(default=datetime.now, max_length=255, verbose_name="评论时间")
     comment_content = models.TextField(verbose_name="评论内容")
     user = models.ForeignKey(User, verbose_name="用户")
+    good = models.ForeignKey(goods, verbose_name="订单")
+    satisficing = models.CharField(default=0, max_length=255, verbose_name="用户满意度")
+
+class prefer(models.Model):
+    user = models.ForeignKey(User, verbose_name="用户")
     good = models.ForeignKey(goods, verbose_name="商品")
+    prefer_detail = models.CharField(max_length=255, verbose_name='喜欢备注')
+
+class replay(models.Model):
+    user = models.ForeignKey(User,default=1, verbose_name="用户")
+    comment = models.ForeignKey(Comment, default=1,verbose_name="评价")
+    content = models.CharField(max_length=255, default="", verbose_name="回复")
+

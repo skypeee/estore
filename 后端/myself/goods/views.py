@@ -1,17 +1,20 @@
 from django.shortcuts import render
 from .serializers import goodCreateSerializer, goodSerializer, GoodUpdateSerializer, FavoriteSerializer, orderCreateSerializer\
-    , FavoriteUpdateSerializer, FavoriteCreateSerializer, orderSerializer, CommentSerializer, CommentCreateSerializer
+    , FavoriteUpdateSerializer, FavoriteCreateSerializer, orderSerializer, CommentSerializer, CommentCreateSerializer,\
+    ReplaySerializer, ReplayCreateSerializer
 from rest_framework.pagination import PageNumberPagination
 from rest_framework import status, generics, views, filters
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.response import Response
-from .filter import GoodFilter, CommentFilter, OrderFilter
-from .models import goods, favorite, order, Comment
+from .filter import GoodFilter, CommentFilter, OrderFilter, ReplayFilter, FavoriteFilter
+from .models import goods, favorite, order, Comment, replay
+from users.models import userAddress
 from .schemas import OrderSchema
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from alipay import AliPay
 from django.contrib.auth import get_user_model
 from datetime import datetime
+import re
 # Create your views here.
 User = get_user_model()
 
@@ -73,8 +76,20 @@ class FavoriteListView(generics.ListAPIView):
     queryset = favorite.objects.all()
     serializer_class = FavoriteSerializer
     pagination_class = SelfPagination
-    filter_backends = (filters.SearchFilter,)
+    filter_backends = (filters.SearchFilter, DjangoFilterBackend)
     search_fields = ('=user__id', )
+    filter_class = FavoriteFilter
+    #
+    # def get(self, request, *args, **kwargs):
+    #     print(request.query_params)
+    #     tmp = request.query_params.get("id")
+    #     pattern = re.compile(r'\d+')
+    #     result1 = pattern.findall(tmp)
+    #     result2 = map(int, result1)
+    #     # result =
+    #     # for i in result2:
+    #     #     result =
+
 
 class FavoriteCreateView(generics.CreateAPIView):
     serializer_class = FavoriteCreateSerializer
@@ -130,38 +145,39 @@ class OrderCreateView(generics.CreateAPIView):
 
     def post(self, request, *args, **kwargs):
         favorite_id = request.data.get('id')
-        if request.data.get("order_address") is None:
-            Favorite = favorite.objects.filter(id=favorite_id[0])[0]
-            address = User.objects.get(id=Favorite.user.id).user_address
-        else:
-            address = request.data.get("order_address")
-        phone = request.data.get ("order_phone")
-        aceptman = request.data.get ("order_aceptman")
-
-        new_order = order.objects.all().order_by("-id")[0]
-        if new_order.order_num is None:
-            order_num = 1
-        else:
-            order_num = int(new_order.order_num) + 1
+        print(favorite_id)
+        try:
+            address = userAddress.objects.get(id=request.data.get("order_address"))
+        except:
+            return Response(data={'code': 400, 'detail': '订单创建失败'}, status=status.HTTP_400_BAD_REQUEST)
+        phone = address.phone
+        aceptman = address.name
+        order_num = request.data.get("order_num")
         for i in favorite_id:
             Favorite = favorite.objects.filter(id=i)[0]
             good = goods.objects.get(id=Favorite.good.id)
             if good.good_num - Favorite.good_num < 0:
                 return Response(data={'code': 400, 'detail': '购买失败，请重试'}, status=status.HTTP_400_BAD_REQUEST)
         for i in favorite_id:
-            Favorite = favorite.objects.filter(id=i)[0]
+            try:
+                Favorite = favorite.objects.filter(id=i)[0]
+            except:
+                return Response(data={'code': 400, 'detail': '购物车为空'}, status=status.HTTP_400_BAD_REQUEST)
             good = goods.objects.get(id=Favorite.good.id)
             serializer = GoodUpdateSerializer()
+            print("order_num", order_num)
             serializer.update(instance=good, validated_data={'id': good.id, 'good_num': good.good_num - Favorite.good_num})
-            serializer = orderCreateSerializer(data={'good': Favorite.good.id, 'user': Favorite.user.id, 'good_num': Favorite.good_num,
-                                                     'order_address': address, 'order_num': order_num,
+            serializer = orderCreateSerializer(data={'good': Favorite.good.id, 'user': Favorite.user.id,
+                                                     'good_num': Favorite.good_num,
+                                                     'order_address': address.content, 'order_num': order_num,
                                                      "order_aceptman": aceptman, "order_phone": phone,
                                                      "order_status": 0})
+            print("ok")
             good.good_num -= Favorite.good_num
             good.save()
             if serializer.is_valid():
                 serializer.save()
-            Favorite.delete()
+                Favorite.delete()
         return Response(data={'code': 200, 'detail': '订单创建成功'}, status=status.HTTP_200_OK)
 
 class alipayView(views.APIView):
@@ -182,10 +198,15 @@ class alipayView(views.APIView):
             total_amount=request.data.get("max_price"),
             subject=subject,
             return_url="https://www.baidu.com",
-            notify_url=""  # 可选, 不填则使用默认notify url
+            notify_url="120.78.197.127:9997/goods/test/"  # 可选, 不填则使用默认notify url
         )
 
         return Response(data={"code": 200, "url": "https://openapi.alipaydev.com/gateway.do?" + order_string})
+
+class testView(views.APIView):
+    def post(self,request):
+        print(request.data)
+        return Response(data={"code": 200})
 
 class OrderListView(views.APIView):
     serializer_class = orderSerializer
@@ -197,10 +218,24 @@ class OrderListView(views.APIView):
 
     def get(self, request):
         order_num = []
+        num = request.query_params.get("order_num")
         if request.query_params.get("user_id") is not None:
-            order_list = queryset = order.objects.all().filter(user_id=request.query_params.get("user_id")).order_by("-order_num")
+            if request.query_params.get("order_status") is not None:
+                order_list = queryset = order.objects.all().filter(
+                    user_id=request.query_params.get("user_id"))\
+                    .filter(order_status=request.query_params.get("order_status"))\
+                    .order_by ("-order_num")
+            else:
+                order_list = queryset = order.objects.all().filter(user_id=request.query_params.get("user_id")).order_by("-order_num")
         else:
-            order_list = queryset = order.objects.all ().filter().order_by ("-order_num")
+            if request.query_params.get("order_status") is not None:
+                order_list = queryset = order.objects.all()\
+                    .filter(order_status=request.query_params.get("order_status"))\
+                    .order_by ("-order_num")
+            else:
+                order_list = queryset = order.objects.all().filter().order_by ("-order_num")
+        if num is not None:
+            order_list = order_list.filter(order_num=num)
         for i in order_list:
             if int(i.order_num) in order_num:
                 pass
@@ -211,7 +246,7 @@ class OrderListView(views.APIView):
         for i in order_num:
             tmp = order_list.filter(order_num=i)
             user = User.objects.get(id=tmp[0].user_id)
-            data = {"order_num": i, "order_time":tmp[0].order_time, "data": [], "max_price": 0,
+            data = {"order_num": str(i), "order_time":tmp[0].order_time, "data": [], "max_price": 0,
                     "order_address": tmp[0].order_address, "order_aceptman": tmp[0].order_aceptman,
                     "order_phone": tmp[0].order_phone, "order_status": tmp[0].order_status,
                     "user_name": user.username
@@ -219,16 +254,15 @@ class OrderListView(views.APIView):
             good_max_price = 0
             for y in tmp:
                 good = goods.objects.get(id=y.good_id)
-                print(good.good_img.name)
                 o = {"id": y.id, "good_num": y.good_num, "good_id": y.good_id, "good_img": good.good_img.name,
                      "good_name": good.good_name, "good_price": good.good_price}
                 good_max_price += y.good_num * good.good_price
                 data["data"].append(o)
             result.append(data)
             data["max_price"] = good_max_price
-        page = int (request.query_params.get ('page', 1))
-        page_size = int (request.query_params.get ('page_size', 7))
-        paginator = Paginator (result, page_size)
+        page = int(request.query_params.get ('page', 1))
+        page_size = int(request.query_params.get ('page_size', 7))
+        paginator = Paginator(result, page_size)
         if page_size != 0 and page != 0 and page_size * page - page_size >= len(result):
             return Response({'detail': '无效页面。'})
         try:
@@ -244,8 +278,10 @@ class orderDeleteView(views.APIView):
     def post(self, request):
         order_num = request.data.get("order_num")
         order_list = order.objects.filter(order_num=order_num)
-        print("pk")
         for i in order_list:
+            good = goods.objects.get(id=i.good_id)
+            good.good_num += i.good_num
+            good.save()
             i.delete()
         return Response(data={"code": 200, "detail": "删除成功"}, status=status.HTTP_200_OK)
 
@@ -263,6 +299,8 @@ class orderUpdateView(generics.GenericAPIView):
             serializer.update(instance=i, validated_data=request.data)
 
         return Response(data={"code": 200, "detail": "修改成功"}, status=status.HTTP_200_OK)
+
+
 
 class CommentListView(generics.ListAPIView):
     serializer_class = CommentSerializer
@@ -282,3 +320,22 @@ class CommentCreateView(generics.CreateAPIView):
         else:
             return Response(data={"code": 400, "detail": "参数错误"}, status=status.HTTP_400_BAD_REQUEST)
         return Response(data={"code": 201, "detail": "创建成功"}, status=status.HTTP_201_CREATED)
+
+class ReplayListView(generics.ListAPIView):
+    serializer_class = ReplaySerializer
+    queryset = replay.objects.all()
+    pagination_class = SelfPagination
+    filter_backends = (filters.SearchFilter, DjangoFilterBackend)
+    filter_class = ReplayFilter
+
+class ReplayCreateView(generics.CreateAPIView):
+    serializer_class = ReplayCreateSerializer
+
+    def post(self, request, *args, **kwargs):
+        replaySerializer = ReplayCreateSerializer(data=request.data)
+        if replaySerializer.is_valid():
+            replaySerializer.save()
+        else:
+            return Response(data={"code": 400, "detail": "参数错误"}, status=status.HTTP_400_BAD_REQUEST)
+        return Response(data={"code": 201, "detail": "创建成功"}, status=status.HTTP_201_CREATED)
+
