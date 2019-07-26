@@ -79,16 +79,6 @@ class FavoriteListView(generics.ListAPIView):
     filter_backends = (filters.SearchFilter, DjangoFilterBackend)
     search_fields = ('=user__id', )
     filter_class = FavoriteFilter
-    #
-    # def get(self, request, *args, **kwargs):
-    #     print(request.query_params)
-    #     tmp = request.query_params.get("id")
-    #     pattern = re.compile(r'\d+')
-    #     result1 = pattern.findall(tmp)
-    #     result2 = map(int, result1)
-    #     # result =
-    #     # for i in result2:
-    #     #     result =
 
 
 class FavoriteCreateView(generics.CreateAPIView):

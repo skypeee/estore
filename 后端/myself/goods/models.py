@@ -7,6 +7,9 @@ import sys
 
 User = get_user_model()
 
+class goods_type(models.Model):
+    name = models.CharField(max_length=255, default="", verbose_name="商品分类名称")
+
 class goods(models.Model):
     color_status = (
         (1, "黑"),
@@ -21,12 +24,8 @@ class goods(models.Model):
     good_img = models.ImageField(default='', upload_to="goods/%Y/%m", verbose_name='用户头像', max_length=100)
     good_content = models.CharField(max_length=255, default='', verbose_name='商品内容')
     good_parameter = models.CharField(max_length=255, default='', verbose_name='商品参数')
-    good_type = models.CharField(max_length=255, default='', verbose_name='商品类型')
+    good_type = models.ForeignKey(goods_type, verbose_name="商品分类")
     good_num = models.IntegerField(default=999, verbose_name="商品数量")
-
-class limitGood(models.Model):
-    good = models.ForeignKey(goods, verbose_name='商品')
-    last_time = models.DateTimeField(max_length=255, default=datetime.now, verbose_name='截止时间')
 
 class favorite(models.Model):
     good = models.ForeignKey(goods, verbose_name='商品')
