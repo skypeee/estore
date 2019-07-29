@@ -20,4 +20,6 @@ urlpatterns = [
     url(r"relay_Created/", views.ReplayCreateView.as_view(), name="replay_created"),
     url(r"test/", views.testView.as_view(), name="test"),
     url(r"GoodType_List/", views.GoodTypeListView.as_view(), name="goodType_list"),
+    url(r"GoodType_Create/", views.GoodTypeCreateView.as_view(), name="goodType_list"),
+
 ]

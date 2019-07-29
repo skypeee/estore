@@ -333,5 +333,5 @@ class GoodTypeListView(generics.ListAPIView):
     filter_backends = (DjangoFilterBackend, )
     filter_class = GoodTypeFilter
 
-class GoodCreateView(generics.CreateAPIView):
+class GoodTypeCreateView(generics.CreateAPIView):
     serializer_class = GoodTypeSerializer
