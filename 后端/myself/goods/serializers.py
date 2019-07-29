@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import goods, favorite, order, Comment, replay
+from .models import goods, favorite, order, Comment, replay,goods_type
 from users.serializers import UserSerializer
 
 class goodSerializer(serializers.ModelSerializer):
@@ -113,3 +113,8 @@ class ReplayCreateSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         return replay.objects.create(**validated_data)
+
+class GoodTypeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = goods_type
+        fields = ('__all__')

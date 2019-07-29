@@ -1,5 +1,5 @@
 import django_filters
-from .models import goods, Comment, order, replay, favorite
+from .models import goods, Comment, order, replay, favorite, goods_type
 
 class GoodFilter(django_filters.rest_framework.FilterSet):
     id = django_filters.CharFilter(field_name="id")
@@ -41,3 +41,11 @@ class FavoriteFilter(django_filters.rest_framework.FilterSet):
     class Meta:
         model = favorite
         fields = ["id"]
+
+class GoodTypeFilter(django_filters.rest_framework.FilterSet):
+    id = django_filters.CharFilter(field_name="id")
+    name = django_filters.CharFilter(field_name="name")
+
+    class Meta:
+        model = goods_type
+        fields = ["id", "name"]

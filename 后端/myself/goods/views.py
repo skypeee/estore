@@ -1,13 +1,13 @@
 from django.shortcuts import render
 from .serializers import goodCreateSerializer, goodSerializer, GoodUpdateSerializer, FavoriteSerializer, orderCreateSerializer\
     , FavoriteUpdateSerializer, FavoriteCreateSerializer, orderSerializer, CommentSerializer, CommentCreateSerializer,\
-    ReplaySerializer, ReplayCreateSerializer
+    ReplaySerializer, ReplayCreateSerializer, GoodTypeSerializer
 from rest_framework.pagination import PageNumberPagination
 from rest_framework import status, generics, views, filters
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.response import Response
-from .filter import GoodFilter, CommentFilter, OrderFilter, ReplayFilter, FavoriteFilter
-from .models import goods, favorite, order, Comment, replay
+from .filter import GoodFilter, CommentFilter, OrderFilter, ReplayFilter, FavoriteFilter, GoodTypeFilter
+from .models import goods, favorite, order, Comment, replay, goods_type
 from users.models import userAddress
 from .schemas import OrderSchema
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -290,15 +290,12 @@ class orderUpdateView(generics.GenericAPIView):
 
         return Response(data={"code": 200, "detail": "修改成功"}, status=status.HTTP_200_OK)
 
-
-
 class CommentListView(generics.ListAPIView):
     serializer_class = CommentSerializer
     queryset = Comment.objects.all()
     pagination_class = SelfPagination
     filter_backends = (filters.SearchFilter, DjangoFilterBackend)
     filter_class = CommentFilter
-
 
 class CommentCreateView(generics.CreateAPIView):
     serializer_class = CommentCreateSerializer
@@ -329,3 +326,9 @@ class ReplayCreateView(generics.CreateAPIView):
             return Response(data={"code": 400, "detail": "参数错误"}, status=status.HTTP_400_BAD_REQUEST)
         return Response(data={"code": 201, "detail": "创建成功"}, status=status.HTTP_201_CREATED)
 
+class GoodTypeListView(generics.ListAPIView):
+    serializer_class = GoodTypeSerializer
+    queryset = goods_type.objects.all()
+    pagination_class = SelfPagination
+    filter_backends = (filters.SearchFilter)
+    filter_class = GoodTypeFilter
