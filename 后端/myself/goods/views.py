@@ -330,5 +330,8 @@ class GoodTypeListView(generics.ListAPIView):
     serializer_class = GoodTypeSerializer
     queryset = goods_type.objects.all()
     pagination_class = SelfPagination
-    filter_backends = (filters.SearchFilter)
+    filter_backends = (DjangoFilterBackend, )
     filter_class = GoodTypeFilter
+
+class GoodCreateView(generics.CreateAPIView):
+    serializer_class = GoodTypeSerializer
