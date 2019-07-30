@@ -2,6 +2,16 @@ from rest_framework import serializers
 from .models import goods, favorite, order, Comment, replay,goods_type
 from users.serializers import UserSerializer
 
+class GoodListSerializer(serializers.ModelSerializer):
+    goodType_name = serializers.SerializerMethodField ()
+    class Meta:
+        model = goods
+        fields = ('good_name', 'good_price', 'good_brand', 'good_color', 'good_img', 'good_content',
+                  'good_parameter', 'good_type', 'good_num' , 'goodType_name')
+
+    def get_goodType_name(self, obj):
+        return goods_type.objects.get(id=obj.good_type)
+
 class goodSerializer(serializers.ModelSerializer):
     class Meta:
         model = goods
@@ -22,6 +32,7 @@ class GoodUpdateSerializer(goodSerializer):
     good_content = serializers.CharField(required=False)
     good_img = serializers.ImageField(required=False)
     good_num = serializers.IntegerField(required=False)
+    good_type = serializers.IntegerField(required=False)
 
     def update(self, instance, validated_data):
         instance.good_name = validated_data.get('good_name', instance.good_name)
