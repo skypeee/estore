@@ -342,4 +342,4 @@ class indexView(views.APIView):
         l = []
         for i in type:
             l.append({i.name: goods.objects.filter(good_type_id=i.id)})
-        return l
+        return Response(l)
