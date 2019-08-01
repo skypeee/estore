@@ -21,5 +21,6 @@ urlpatterns = [
     url(r"test/", views.testView.as_view(), name="test"),
     url(r"GoodType_List/", views.GoodTypeListView.as_view(), name="goodType_list"),
     url(r"GoodType_Create/", views.GoodTypeCreateView.as_view(), name="goodType_list"),
+    url(r"indexView/", views.indexView.as_view(), name="indexView"),
 
 ]

@@ -108,7 +108,7 @@ DATABASES = {
         'NAME': 'world',
         'USER': 'root',
         'PASSWORD': '123456',
-        'HOST': 'localhost',
+        'HOST': '120.78.197.127',
         'PORT': '3306',
     }
 }

@@ -1,7 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c1fdd77-2f25-48ee-8ba2-489bfbefdd3a" name="Default Changelist" comment="" />
+    <list default="true" id="7c1fdd77-2f25-48ee-8ba2-489bfbefdd3a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../前端/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/.babelrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端/.postcssrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/.postcssrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端/build/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/build/build.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端/build/check-versions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/build/check-versions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端/build/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/build/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端/build/vue-loader.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/build/vue-loader.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端/build/webpack.base.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/build/webpack.base.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端/build/webpack.dev.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/build/webpack.dev.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端/build/webpack.prod.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/build/webpack.prod.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端/config/dev.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/config/dev.env.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/config/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端/config/prod.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/config/prod.env.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/src/components/HelloWorld.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端/src/http/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/src/http/axios.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端/src/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/src/login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端/src/pages/content.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/src/pages/content.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端/src/pages/contentList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/src/pages/contentList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端/src/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/src/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端/src/pages/order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/src/pages/order.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端/src/pages/personal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/src/pages/personal.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端/src/pages/shopping.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/src/pages/shopping.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端/src/register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/src/register.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../前端/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/goods/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/goods/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myself/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/myself/settings.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,16 +139,70 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-1165511971">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="1069" />
+          <entry key="py@myself" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CommandLine" value="7" />
+          <entry key="Python" value="1069" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Python" value="5" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/goods/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="48" column="84" selection-start-line="48" selection-start-column="84" selection-end-line="48" selection-end-column="84" />
+            <state relative-caret-position="154">
+              <caret line="11" selection-start-line="11" selection-end-line="22" selection-end-column="47" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
+                <element signature="e#1505#2246#0" />
+                <element signature="e#2282#2463#0" />
+                <element signature="e#2499#2846#0" />
+                <element signature="e#2880#3058#0" />
+                <element signature="e#3092#3299#0" />
+                <marker date="1564142210140" expanded="true" signature="1177:1179" ph="..." />
+                <marker date="1564142210140" expanded="false" signature="1208:1213" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/goods/serializers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -121,44 +211,47 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/goods/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5852">
-              <caret line="279" column="40" selection-start-line="279" selection-start-column="40" selection-end-line="279" selection-end-column="40" />
+            <state relative-caret-position="477">
+              <caret line="341" column="9" selection-start-line="341" selection-start-column="9" selection-end-line="341" selection-end-column="9" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
-                <marker date="1562571915922" expanded="true" signature="10714:10723" ph="..." />
-                <marker date="1562571915922" expanded="true" signature="11383:12288" ph="..." />
-                <marker date="1562571915922" expanded="true" signature="11735:12288" ph="..." />
+                <marker date="1564660277508" expanded="true" signature="15148:15153" ph="..." />
+                <marker date="1564660277508" expanded="true" signature="15399:15404" ph="..." />
+                <marker date="1564660277508" expanded="true" signature="15474:15479" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myself/__init__.py">
+        <entry file="file://$PROJECT_DIR$/myself/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="609">
+              <caret line="109" column="27" selection-start-line="109" selection-start-column="21" selection-end-line="109" selection-end-column="27" />
+              <folding>
+                <element signature="e#308#317#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/users/views.py">
+        <entry file="file://$PROJECT_DIR$/goods/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="68" column="41" selection-start-line="68" selection-start-column="41" selection-end-line="68" selection-end-column="41" />
-              <folding>
-                <element signature="e#0#47#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="484">
+              <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/users/models.py">
+        <entry file="file://$PROJECT_DIR$/goods/filter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="27" selection-start-column="22" selection-end-column="28" />
+            <state relative-caret-position="1056">
+              <caret line="49" column="26" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -204,6 +297,9 @@
       <find>vali</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -211,21 +307,21 @@
         <option value="$PROJECT_DIR$/users/migrations/0001_initial.py" />
         <option value="$PROJECT_DIR$/users/urls.py" />
         <option value="$PROJECT_DIR$/wish/utils.py" />
-        <option value="$PROJECT_DIR$/goods/filter.py" />
-        <option value="$PROJECT_DIR$/goods/serializers.py" />
         <option value="$PROJECT_DIR$/users/utils.py" />
         <option value="$PROJECT_DIR$/myself/__init__.py" />
         <option value="$PROJECT_DIR$/myself/urls.py" />
         <option value="$PROJECT_DIR$/goods/schemas.py" />
-        <option value="$PROJECT_DIR$/myself/settings.py" />
         <option value="$PROJECT_DIR$/wish/views.py" />
         <option value="$PROJECT_DIR$/wish/urls.py" />
-        <option value="$PROJECT_DIR$/goods/models.py" />
-        <option value="$PROJECT_DIR$/goods/urls.py" />
         <option value="$PROJECT_DIR$/users/models.py" />
         <option value="$PROJECT_DIR$/users/serializers.py" />
         <option value="$PROJECT_DIR$/users/views.py" />
+        <option value="$PROJECT_DIR$/goods/models.py" />
+        <option value="$PROJECT_DIR$/goods/filter.py" />
+        <option value="$PROJECT_DIR$/myself/settings.py" />
+        <option value="$PROJECT_DIR$/goods/serializers.py" />
         <option value="$PROJECT_DIR$/goods/views.py" />
+        <option value="$PROJECT_DIR$/goods/urls.py" />
       </list>
     </option>
   </component>
@@ -255,6 +351,7 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -283,11 +380,6 @@
               <item name="myself" type="462c0819:PsiDirectoryNode" />
               <item name="users" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="myself" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myself" type="462c0819:PsiDirectoryNode" />
-              <item name="wish" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -296,7 +388,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../资源库项目/03-development/06-webbackend/ResourceServer" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
@@ -368,8 +460,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49665925" visible="true" weight="0.21179625" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49665925" visible="true" weight="0.22788204" />
       <window_info id="Structure" order="1" sideWeight="0.5033408" side_tool="true" weight="0.20375335" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -379,13 +472,13 @@
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" weight="0.3281471" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5020107" side_tool="true" weight="0.38526914" />
-      <window_info anchor="bottom" id="manage.py@myself" order="10" weight="0.42857143" />
+      <window_info anchor="bottom" id="manage.py@myself" order="10" weight="0.42776203" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3281471" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3281471" />
-      <window_info anchor="bottom" id="Run" order="13" sideWeight="0.49798927" weight="0.30975956" />
+      <window_info anchor="bottom" id="Run" order="13" sideWeight="0.49798927" weight="0.31444758" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -536,13 +629,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goods/filter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/rest_framework/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
@@ -609,19 +695,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goods/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="43" column="6" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wish/应用公钥2048.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wish/alipay_public_key.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/wish/应用公钥2048.txt" />
+    <entry file="file://$PROJECT_DIR$/wish/alipay_public_key.txt" />
     <entry file="file://$PROJECT_DIR$/wish/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -640,13 +715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="25" column="110" selection-start-line="4" selection-end-line="25" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goods/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -671,16 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="8" column="74" selection-start-line="8" selection-start-column="74" selection-end-line="8" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myself/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1006">
-          <caret line="147" column="16" selection-start-line="147" selection-start-column="16" selection-end-line="147" selection-end-column="16" />
-          <folding>
-            <element signature="e#308#317#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -709,29 +767,6 @@
         <state relative-caret-position="-660" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goods/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="48" column="84" selection-start-line="48" selection-start-column="84" selection-end-line="48" selection-end-column="84" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goods/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5852">
-          <caret line="279" column="40" selection-start-line="279" selection-start-column="40" selection-end-line="279" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <marker date="1562571915922" expanded="true" signature="10714:10723" ph="..." />
-            <marker date="1562571915922" expanded="true" signature="11383:12288" ph="..." />
-            <marker date="1562571915922" expanded="true" signature="11735:12288" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myself/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -748,11 +783,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/users/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="68" column="41" selection-start-line="68" selection-start-column="41" selection-end-line="68" selection-end-column="41" />
+        <state relative-caret-position="836">
+          <caret line="68" column="36" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="11" selection-start-line="11" selection-end-line="22" selection-end-column="47" />
           <folding>
-            <element signature="e#0#47#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#1505#2246#0" />
+            <element signature="e#2282#2463#0" />
+            <element signature="e#2499#2846#0" />
+            <element signature="e#2880#3058#0" />
+            <element signature="e#3092#3299#0" />
+            <marker date="1564142210140" expanded="true" signature="1177:1179" ph="..." />
+            <marker date="1564142210140" expanded="false" signature="1208:1213" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods/filter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1056">
+          <caret line="49" column="26" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myself/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="109" column="27" selection-start-line="109" selection-start-column="21" selection-end-line="109" selection-end-column="27" />
+          <folding>
+            <element signature="e#308#317#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="341" column="9" selection-start-line="341" selection-start-column="9" selection-end-line="341" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1564660277508" expanded="true" signature="15148:15153" ph="..." />
+            <marker date="1564660277508" expanded="true" signature="15399:15404" ph="..." />
+            <marker date="1564660277508" expanded="true" signature="15474:15479" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
         </state>
       </provider>
     </entry>

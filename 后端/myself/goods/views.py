@@ -335,3 +335,11 @@ class GoodTypeListView(generics.ListAPIView):
 
 class GoodTypeCreateView(generics.CreateAPIView):
     serializer_class = GoodTypeSerializer
+
+class indexView(views.APIView):
+    def get(self):
+        type = goods_type.objects.all()
+        l = []
+        for i in type:
+            l.append({i.name: goods.objects.filter(good_type_id=i.id)})
+        return l
