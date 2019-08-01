@@ -8,6 +8,10 @@ import personal from '@/pages/personal'
 import shopping from '@/pages/shopping'
 import Super from '@/pages/super'
 import SuperOrder from '@/pages/SuperOrder'
+import address from '@/pages/address'
+import like from '@/pages/like'
+import addorder from '@/pages/addorder'
+import ordersuccess from '@/pages/ordersuccess'
 
 Vue.use(Router)
 
@@ -44,6 +48,23 @@ export default new Router({
     {
       path:'/superOrder',
       component:SuperOrder
-    }
+    },
+    {
+      path:'/address',
+      component:address
+    },
+    {
+      path:'/like',
+      component:like
+    },
+    {
+      path:'/addorder',
+      component:addorder
+    },
+    {
+      path:'/ordersuccess',
+      component:ordersuccess
+
+    },
   ]
 })

@@ -341,5 +341,5 @@ class indexView(views.APIView):
         type = goods_type.objects.all()
         l = []
         for i in type:
-            l.append({i.name: goods.objects.filter(good_type_id=i.id)})
+            l.append({i.name: goods.objects.filter(good_type_id=i.id).values()})
         return Response(l)

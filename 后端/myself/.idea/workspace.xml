@@ -34,9 +34,7 @@
       <change beforePath="$PROJECT_DIR$/../../前端/src/register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/src/register.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../前端/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../前端/src/router/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/goods/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/goods/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/goods/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/goods/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myself/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/myself/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -153,14 +151,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="1069" />
+          <entry key="py" value="1135" />
           <entry key="py@myself" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CommandLine" value="7" />
-          <entry key="Python" value="1069" />
+          <entry key="Python" value="1135" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -208,16 +206,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/goods/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="341" column="9" selection-start-line="341" selection-start-column="9" selection-end-line="341" selection-end-column="9" />
+            <state relative-caret-position="485">
+              <caret line="343" column="77" selection-start-line="343" selection-start-column="77" selection-end-line="343" selection-end-column="77" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
-                <marker date="1564660277508" expanded="true" signature="15148:15153" ph="..." />
-                <marker date="1564660277508" expanded="true" signature="15399:15404" ph="..." />
-                <marker date="1564660277508" expanded="true" signature="15474:15479" ph="..." />
+                <marker date="1564661734194" expanded="true" signature="15148:15153" ph="..." />
+                <marker date="1564661734194" expanded="true" signature="15399:15404" ph="..." />
+                <marker date="1564661734194" expanded="true" signature="15474:15479" ph="..." />
               </folding>
             </state>
           </provider>
@@ -235,11 +233,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/goods/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="484">
-              <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+              <caret line="23" column="68" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -295,6 +293,7 @@
       <find>APi</find>
       <find>alip</find>
       <find>vali</find>
+      <find>get</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -320,8 +319,8 @@
         <option value="$PROJECT_DIR$/goods/filter.py" />
         <option value="$PROJECT_DIR$/myself/settings.py" />
         <option value="$PROJECT_DIR$/goods/serializers.py" />
-        <option value="$PROJECT_DIR$/goods/views.py" />
         <option value="$PROJECT_DIR$/goods/urls.py" />
+        <option value="$PROJECT_DIR$/goods/views.py" />
       </list>
     </option>
   </component>
@@ -788,23 +787,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goods/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="11" selection-start-line="11" selection-end-line="22" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <element signature="e#1505#2246#0" />
-            <element signature="e#2282#2463#0" />
-            <element signature="e#2499#2846#0" />
-            <element signature="e#2880#3058#0" />
-            <element signature="e#3092#3299#0" />
-            <marker date="1564142210140" expanded="true" signature="1177:1179" ph="..." />
-            <marker date="1564142210140" expanded="false" signature="1208:1213" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/goods/filter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1056">
@@ -825,6 +807,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/goods/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="23" column="68" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/myself/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="609">
@@ -835,23 +824,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goods/views.py">
+    <entry file="file://$PROJECT_DIR$/goods/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="341" column="9" selection-start-line="341" selection-start-column="9" selection-end-line="341" selection-end-column="9" />
+        <state relative-caret-position="154">
+          <caret line="11" selection-start-line="11" selection-end-line="22" selection-end-column="47" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <marker date="1564660277508" expanded="true" signature="15148:15153" ph="..." />
-            <marker date="1564660277508" expanded="true" signature="15399:15404" ph="..." />
-            <marker date="1564660277508" expanded="true" signature="15474:15479" ph="..." />
+            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#1505#2246#0" />
+            <element signature="e#2282#2463#0" />
+            <element signature="e#2499#2846#0" />
+            <element signature="e#2880#3058#0" />
+            <element signature="e#3092#3299#0" />
+            <marker date="1564142210140" expanded="true" signature="1177:1179" ph="..." />
+            <marker date="1564142210140" expanded="false" signature="1208:1213" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goods/urls.py">
+    <entry file="file://$PROJECT_DIR$/goods/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+        <state relative-caret-position="485">
+          <caret line="343" column="77" selection-start-line="343" selection-start-column="77" selection-end-line="343" selection-end-column="77" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1564661734194" expanded="true" signature="15148:15153" ph="..." />
+            <marker date="1564661734194" expanded="true" signature="15399:15404" ph="..." />
+            <marker date="1564661734194" expanded="true" signature="15474:15479" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
