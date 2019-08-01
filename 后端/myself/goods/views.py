@@ -337,7 +337,7 @@ class GoodTypeCreateView(generics.CreateAPIView):
     serializer_class = GoodTypeSerializer
 
 class indexView(views.APIView):
-    def get(self):
+    def get(self, request):
         type = goods_type.objects.all()
         l = []
         for i in type:
